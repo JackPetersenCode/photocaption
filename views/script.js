@@ -21,7 +21,6 @@ const onStartUp = async() => {
     const results = await getJsonResponse('/photos');
     const results2 = await getJsonResponse('/users');
 
-    console.log(results);
     while(apiTable.hasChildNodes()) {
         apiTable.removeChild(apiTable.firstChild);
     }
@@ -32,14 +31,20 @@ const onStartUp = async() => {
         let row = apiTable.insertRow();
         let row2 = apiTable.insertRow();
         row.id = photo.id;
-        let cell1 = row.insertCell(0);
-        let cell2 = row.insertCell(1);
-        let cell3 = row.insertCell(2);
-        let cell4 = row2.insertCell(0);
-        let cell5 = row2.insertCell(1);
-        cell1.innerHTML = `<h1 style="color:blue;">${photo.id}</h1>`
-        cell2.innerHTML = `<h2 style="color:black;">${photo.name}</h2>`;
-        cell3.innerHTML = `<img src="${photo.url}" alt="" height="200" width="200" />`;
+        if (row.id % 2 !== 0){
+            row = apiTable.rows[0];
+            row2 = apiTable.rows[1];
+        } else {
+            row = apiTable.rows[2]
+            row2 = apiTable.rows[3]
+        }
+        let cell1 = row.insertCell();
+        //let cell2 = row.insertCell();
+       // let cell3 = row.insertCell();
+        let cell5 = row2.insertCell();
+        cell1.innerHTML = `<h1 style="color:blue;">${photo.id}. ${photo.name}</h1> <img src="${photo.url}" alt="" height="200" width="200" />`
+        //cell2.innerHTML = `<h2 style="color:black;">${photo.name}</h2>`;
+        //cell3.innerHTML = `<img src="${photo.url}" alt="" height="200" width="200" />`;
         photo.captions.forEach(caption => {
             results2.forEach(user => {
                 if (user.id == caption.userId) {
