@@ -6,7 +6,7 @@
     <header>
     </header>
     <body>
-        <h1>Login</h1>
+        <h1 style="vertical-align:top;text-align:center;">Login</h1>
         <ul>
         <% if(messages.success_msg) { %>
             <li><%= messages.success_msg %></li>
@@ -17,7 +17,7 @@
             <li><%= messages.error %></li>
             <% } %>
         </ul>
-        <form action="/users/login" method="POST">
+        <form action="/users/login" method="POST" style="vertical-align:top;text-align:center;">
         <div>
             <input type="email" id="email" name="email" placeholder="email" required>
         </div>
