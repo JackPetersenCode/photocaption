@@ -17,6 +17,15 @@ h2 {
   font-weight: bold;
 }
 
+h4 {
+  vertical-align: top;
+}
+
 table {
-  text-align: center;
+  vertical-align: top;
+}
+
+td {
+  vertical-align: top;
+  text-align:center;
 }

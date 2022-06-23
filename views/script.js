@@ -42,7 +42,7 @@ const onStartUp = async() => {
         //let cell2 = row.insertCell();
        // let cell3 = row.insertCell();
         let cell5 = row2.insertCell();
-        cell1.innerHTML = `<h1 style="color:blue;">${photo.id}. ${photo.name}</h1> <img src="${photo.url}" alt="" height="200" width="200" />`
+        cell1.innerHTML = `<h1 style="color:blue;">${photo.id}. ${photo.name}</h1> <img src="${photo.url}" alt="" height="200" width="200" style="center"/>`
         //cell2.innerHTML = `<h2 style="color:black;">${photo.name}</h2>`;
         //cell3.innerHTML = `<img src="${photo.url}" alt="" height="200" width="200" />`;
         photo.captions.forEach(caption => {
@@ -54,7 +54,7 @@ const onStartUp = async() => {
             })
         })
           
-        cell5.innerHTML = `<h4 style="color:rgb(6, 6, 56);font-style:italic;font-weight:200;font-size:20px;font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;">${captionBodyArray.join(' ')}</h4>`;
+        cell5.innerHTML = `<h4 style="color:rgb(6, 6, 56);font-style:italic;font-weight:200;font-size:20px;font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;vertical-align:top">${captionBodyArray.join(' ')}<div style="display:inline-block;vertical-align:top;"></div>`;
     })
 
     while(apiTable2.hasChildNodes()) {
