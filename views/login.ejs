@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.css"/>
+    </head>
+    <header>
+    </header>
+    <body>
+        <h1>Login</h1>
+        <ul>
+        <% if(messages.success_msg) { %>
+            <li><%= messages.success_msg %></li>
+            <% } %>
+        </ul>
+        <ul>
+            <% if(messages.error) { %>
+            <li><%= messages.error %></li>
+            <% } %>
+        </ul>
+        <form action="/users/login" method="POST">
+        <div>
+            <input type="email" id="email" name="email" placeholder="email" required>
+        </div>
+        <div>
+            <input type="password" id="password" name="password" placeholder="password" required>
+        </div>
+        <div>
+            <input type="submit" value="Login" />
+        </div>
+        <a href="/users/register">Register</a>
+        </form>
+    </body>
+</html>

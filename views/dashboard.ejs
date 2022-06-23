@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.css"/>
+        <link rel="stylesheet" href="/style.css"/>
+        <meta http-equiv="Content-Security-Policy" content="default-src *;
+   img-src * 'self' data: https:; script-src 'self' 'unsafe-inline' 'unsafe-eval' *;
+   style-src  'self' 'unsafe-inline' *">
+    </head>
+    <header>
+        <script src="../script.js" async></script>
+    </header>
+    <body>
+        <a href="/users/logout">logout</a>
+        <h1>Hello <%= user %></h1>
+        <br>
+        <h4>Add a Caption</h4>
+        <input type="hidden" name="newUuid" id="newUuid" value="<%= userUuid %>">
+        <label for="newPhotoId">Enter Photo Id to add Caption: </label>
+        <input type="text" name="newPhotoId" id="newPhotoId">
+        <label for="newCaption">Enter your Caption: </label>
+        <input type="text" name="newCaption" id="newCaption">
+        <input type="hidden" name="captionUser" id="captionUser" value="<%= user %>">
+        <input type="submit" name="newCaptionSubmit" id="newCaptionSubmit">
+        <input type="hidden" name="currentId" id="currentId" value="<%= id %>">
+        <input type="hidden" name="currentUuid" id="currentUuid" value="<%= userUuid %>">
+        <label for="captionIdToUpdate">Enter Caption ID to update or delete: </label>
+        <input type="text" name="captionIdToUpdate" id="captionIdToUpdate">
+        <input type="submit" name="DELETE" id="deleteCaptionSubmit" value="Delete">
+        <label for="updatedCaption">Update your caption: </label>
+        <input type="text" name="updatedCaption" id="updatedCaption">
+        <input type="submit" name="UPDATE" id="updateCaptionSubmit" value="Update">
+        <table class="table" id="apiTable">
+            <tr>
+
+            </tr>
+        </table>
+        <h4>table below</h4>
+        <table class="table" id="apiTable2">
+            <tr>
+
+            </tr>
+        </table>
+    </body>
+
+</html>
+
