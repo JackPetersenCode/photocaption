@@ -9,7 +9,7 @@ const bcrypt = require('bcrypt');
 const session = require('express-session');
 const RedisStore = require('connect-redis')(session);
 const flash = require('express-flash');
-//const { midWare, del } = require('./middleware/cacheMidware');
+
 const captionsRouter = require("./routes/captionRouter");
 const photoRouter = require("./routes/photoRouter");
 const userRouter = require("./routes/userRouter");
