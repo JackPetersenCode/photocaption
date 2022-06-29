@@ -14,11 +14,13 @@
     "dialect": "mysql"
   },
   "production": {
-    "username": "database_username",
-    "password": "database_password",
-    "database": "project_name_production",
-    "host": "127.0.0.1",
+    "use_env_variable": "DATABASE_URL",
     "dialect": "postgres",
-    "operatorsAliases": "0"
+    "dialectOptions": {
+      "ssl": {
+        "require": true,
+        "rejectUnauthorized": false
+      }
+    }
   }
 }
