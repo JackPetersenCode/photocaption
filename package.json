@@ -35,7 +35,7 @@
     "pg-hstore": "^2.3.4",
     "redis": "^4.0.4",
     "redis-server": "^1.2.2",
-    "sequelize": "^6.18.0",
+    "sequelize": "^6.21.2",
     "sequelize-cli": "^6.4.1",
     "swagger-jsdoc": "^6.1.0",
     "swagger-ui-express": "^4.3.0",

@@ -46,6 +46,7 @@ const onStartUp = async() => {
         //cell2.innerHTML = `<h2 style="color:black;">${photo.name}</h2>`;
         //cell3.innerHTML = `<img src="${photo.url}" alt="" height="200" width="200" />`;
         photo.captions.forEach(caption => {
+            console.log(caption)
             results2.forEach(user => {
                 if (user.id == caption.userId) {
                     captionBodyArray.push(`${caption.id}` + '. ' + caption.body + `<br/>` + `-${user.name}` + `<br/><br/>`);

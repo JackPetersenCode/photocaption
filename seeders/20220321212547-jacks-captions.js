@@ -27,7 +27,7 @@ module.exports = {
       {
         //id: 3,
         uuid: "99999d6e-c1c5-4dd1-8409-cd82048af409",
-        body: "There's pee in here!",
+        body: "Sorry, I had to do a #3!",
         userId: 3,
         photoId: 3,
         createdAt: "2022-03-13T20:54:10.809Z",

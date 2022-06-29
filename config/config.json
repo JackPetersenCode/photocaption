@@ -2,7 +2,7 @@
   "development": {
     "username": "petejackerson",
     "password": "redsox45",
-    "database": "photocaption",
+    "database": "photocaptions",
     "host": "127.0.0.1",
     "dialect": "postgres"
   },
@@ -14,13 +14,11 @@
     "dialect": "mysql"
   },
   "production": {
-    "use_env_variable": "DATABASE_URL",
+    "username": "database_username",
+    "password": "database_password",
+    "database": "project_name_production",
+    "host": "127.0.0.1",
     "dialect": "postgres",
-    "dialectOptions": {
-      "ssl": {
-        "require": true,
-        "rejectUnauthorized": false
-      }
-    }
+    "operatorsAliases": "0"
   }
 }
