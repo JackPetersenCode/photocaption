@@ -21,7 +21,7 @@ router.get('/login', (req, res) => {
 
 router.get('/logout', function(req, res){
     req.logout();
-    res.redirect('/login');
+    res.redirect('users/login');
 });
 
 router.get('/register', (req, res) => {
