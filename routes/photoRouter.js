@@ -20,23 +20,23 @@ const redisClient = new Redis(process.env.REDIS_URL);
  */
 router.get('/', async (req, res) => {
     console.log('fdkjsjakjfdksjkafjkdjskajfkdjsakfjdjskafjkdjsakfjdksajfkdjsakfjdksaj');
-    let cachedPhotos = await redisClient.get("photos");
-    if (cachedPhotos) {
+    try {
+        let cachedPhotos = await redisClient.get("photos");
         console.log(cachedPhotos);
         return res.json(JSON.parse(cachedPhotos))
-    } else {
-        try {
-            console.log('im inside the try block');
-            const photos = await Photos.findAll({
-                include: ['captions']
-            });
-            redisClient.set('photos', JSON.stringify(photos));
-            return res.json(photos);
-        } catch(err) {
-            console.log(err)
-            return res.status(500).json({error: 'something went wrong'})
+    } catch(err) {
+            try {
+                console.log('im inside the try block');
+                const photos = await Photos.findAll({
+                    include: ['captions']
+                });
+                redisClient.set('photos', JSON.stringify(photos));
+                return res.json(photos);
+            } catch(err) {
+                console.log(err)
+                return res.status(500).json({error: 'something went wrong'})
+            }
         }
-    }
 }),
 
 /**
