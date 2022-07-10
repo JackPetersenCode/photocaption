@@ -13,6 +13,16 @@ describe('GET /captions', function() {
   });
 });
 
+describe('UPDATE /captions', function() {
+  it('responds with json', function(done) {
+    request(app)
+      .get('/captions')
+      .set('Accept', 'application/json')
+      .expect('Content-Type', /json/)
+      .expect(200, done);
+  });
+});
+
 describe('GET /photos', function() {
   it('responds with json', function(done) {
     request(app)
@@ -32,4 +42,3 @@ describe('GET /users', function() {
       .expect(200, done);
   });
 });
-

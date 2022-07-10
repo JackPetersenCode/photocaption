@@ -50,7 +50,7 @@ https://jacks-caption-contest.herokuapp.com/
 Once the app is running locally, you can access the API at `http://localhost:5000/`
 
 ## Testing with Swagger
-Swagger documentation and testing available at `http://localhost:5000/docs`
+Swagger documentation and testing available at `http://localhost:5000/api-docs`
 
 ## Resources
 - https://www.codecademy.com
